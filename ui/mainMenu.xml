@@ -70,8 +70,10 @@
 
 		<CMD cmd="userVariable.bgImg='/data/main' + userVariable.bgIndex + '.jpg'" />
 		<CMD cmd="overlay.defaultImg= userVariable.bgImg" />
-		<CMD cmd="animation.show('overlay', 'fade', '', 2000, '')" delay="100" />
-		<CMD cmd="animation.flyIn('overlay', 20,20,260,460, '', 1000, '')" delay="100" />
+		<CMD delay="100">
+			<CMD cmd="animation.show('overlay', 'fade', '', 2000, '')" />
+			<CMD cmd="animation.flyIn('overlay', 20,20,260,460, '', 1000, '')" />
+		</CMD>
 		<CMD cmd="bg.defaultImg=userVariable.bgImg" delay="2200" />
 		<CMD cmd="overlay.visible='invisible'" delay="2300" />
 		<CMD cmd="function.aniBgCheck" delay="7000" />
